@@ -22,9 +22,10 @@ import {
 } from "lucide-react";
 import { Label } from "./ui/label";
 import { Switch } from "./ui/switch";
-import { cn } from "@/lib/server-utils";
 import { useTheme } from "next-themes";
 import { signOut } from "next-auth/react";
+import { cn } from "@/lib/utils";
+// import { signOut } from "next-auth/react";
 function MoreDropdown() {
   const [open, setOpen] = useState(false);
   const [showModeToggle, setShowModeToggle] = useState(false);

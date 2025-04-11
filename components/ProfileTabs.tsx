@@ -2,7 +2,7 @@
 
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { UserWithExtras } from "@/lib/definitions";
-import { cn } from "@/lib/server-utils";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Separator } from "./ui/separator";

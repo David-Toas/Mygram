@@ -12,7 +12,7 @@ import {
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
 import { usePathname } from "next/navigation";
-import { cn } from "@/lib/server-utils";
+import { cn } from "@/lib/utils";
 
 const links = [
   { name: "Home", href: "/dashboard", icon: Home },

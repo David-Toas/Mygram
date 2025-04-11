@@ -1,7 +1,7 @@
 "use client";
 
 import { PostWithExtras } from "@/lib/definitions";
-import { cn } from "@/lib/server-utils";
+import { cn } from "@/lib/utils";
 import { Like } from "@prisma/client";
 import { Heart } from "lucide-react";
 import { useOptimistic } from "react";
