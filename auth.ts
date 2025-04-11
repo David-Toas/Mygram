@@ -2,12 +2,12 @@
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import prisma from "@/lib/prisma";
 import GoogleProvider from "next-auth/providers/google";
-import NextAuth, { type NextAuthOptions } from "next-auth"; // getServerSession
-// import {
-//   GetServerSidePropsContext,
-//   NextApiRequest,
-//   NextApiResponse,
-// } from "next";
+import NextAuth, {getServerSession, type NextAuthOptions } from "next-auth"; 
+import {
+  GetServerSidePropsContext,
+  NextApiRequest,
+  NextApiResponse,
+} from "next";
 
 export const config = {
   pages: {
@@ -71,11 +71,11 @@ export const config = {
 export default NextAuth(config);
 
 // Use it in server contexts
-// export function auth(
-//   ...args:
-//     | [GetServerSidePropsContext["req"], GetServerSidePropsContext["res"]]
-//     | [NextApiRequest, NextApiResponse]
-//     | []
-// ) {
-//   return getServerSession(...args, config);
-// }
+export function auth(
+  ...args:
+    | [GetServerSidePropsContext["req"], GetServerSidePropsContext["res"]]
+    | [NextApiRequest, NextApiResponse]
+    | []
+) {
+  return getServerSession(...args, config);
+}

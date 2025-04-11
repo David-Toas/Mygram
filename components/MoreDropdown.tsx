@@ -13,6 +13,7 @@ import {
   Activity,
   Bookmark,
   ChevronLeft,
+  LogOut,
   Menu,
   Moon,
   Settings,
@@ -23,6 +24,7 @@ import { Label } from "./ui/label";
 import { Switch } from "./ui/switch";
 import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
+import { signOut } from "next-auth/react";
 // import { signOut } from "next-auth/react";
 function MoreDropdown() {
   const [open, setOpen] = useState(false);
@@ -92,10 +94,10 @@ function MoreDropdown() {
               <p>Switch appearance</p>
             </DropdownMenuItem>
 
-            {/* <DropdownMenuItem className="menuItem" onClick={() => signOut()}>
+            <DropdownMenuItem className="menuItem" onClick={() => signOut()}>
               <LogOut size={20} />
               <p>Log out</p>
-            </DropdownMenuItem> */}
+            </DropdownMenuItem>
           </>
         )}
 
