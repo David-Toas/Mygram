@@ -2,7 +2,7 @@
 
 import { deletePost } from "@/lib/actions";
 import { PostWithExtras } from "@/lib/definitions";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/server-utils";
 import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { MoreHorizontal } from "lucide-react";
 import Link from "next/link";

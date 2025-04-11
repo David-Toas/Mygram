@@ -1,5 +1,5 @@
 import { PostWithExtras } from "@/lib/definitions";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/server-utils";
 import { MessageCircle } from "lucide-react";
 import Link from "next/link";
 import ActionIcon from "./ActionIcon";

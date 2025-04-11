@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/server-utils";
 import ReactTimeago from "react-timeago";
 
 type Props = {

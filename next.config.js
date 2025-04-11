@@ -18,7 +18,7 @@ const nextConfig = {
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {
-      // Define fallbacks for all Node.js core modules
+      // Define fallbacks for Node.js core modules
       config.resolve.fallback = {
         ...config.resolve.fallback,
         fs: false,
@@ -34,24 +34,11 @@ const nextConfig = {
         'fs/promises': false,
         child_process: false,
         util: false,
-        tty: false,
-        net: false,
-        dns: false,
-        tls: false,
-        assert: false,
-        buffer: require.resolve('buffer/')
+        buffer: false
       };
-      
-      // Add buffer polyfill
-      config.plugins.push(
-        new config.webpack.ProvidePlugin({
-          Buffer: ['buffer', 'Buffer']
-        })
-      );
     }
     return config;
-  },
-  transpilePackages: ['@auth/prisma-adapter', '@prisma/client']
+  }
 };
 
 module.exports = nextConfig;

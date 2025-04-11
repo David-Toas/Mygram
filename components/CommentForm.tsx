@@ -3,7 +3,7 @@
 
 import { createComment } from "@/lib/actions";
 import { CreateComment } from "@/lib/schemas";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/server-utils";
 import {
   Form,
   FormControl,

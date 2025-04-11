@@ -2,7 +2,7 @@
 
 import { bookmarkPost } from "@/lib/actions";
 import { PostWithExtras } from "@/lib/definitions";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/server-utils";
 import ActionIcon from "@/components/ActionIcon";
 import { SavedPost } from "@prisma/client";
 import { Bookmark } from "lucide-react";
